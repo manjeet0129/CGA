@@ -1,0 +1,115 @@
+//arc
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    arc(100,100,0,135,50); // Draw an arc
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//circle
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    circle(100,100,50); // Draw an arc
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//intagraph bar
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    bar(100, 100, 200, 200); // Draw a bar (rectangle filled with current fill color and pattern)
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//bar 3d
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    bar3d(100, 100, 200, 200, 50, 1); // Draw a 3D bar
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//ellipse
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    ellipse(100, 100, 0, 360, 50, 25); // Draw an ellipse
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//filliepse
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    setfillstyle(SOLID_FILL, BLUE); // Set fill style to solid blue
+    fillellipse(100, 100, 50, 25); // Draw a blue-filled ellipse
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//drawpoly
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    int points[] = {50, 50, 40, 200, 500, 400, 460,300,430,300}; // Polygon vertices
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    drawpoly(6, points); // Draw a polygon with 6 vertices
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//fillpoly
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm,points[] = {50, 50, 40, 200, 500, 400, 460,300,430,300}; // Polygon vertices
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    fillpoly(6, points); // Draw a polygon with 6 vertices
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
+
+//graph
+#include <graphics.h>
+#include <conio.h>
+
+void main() {
+    int gd = DETECT, gm;
+    int midx, midy;
+    initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+    midx = getmaxx() / 2; // Get the middle x-coordinate of the screen
+    midy = getmaxy() / 2; // Get the middle y-coordinate of the screen
+    setcolor(RED); // Set line color to red
+    line(1, midy, 640, midy); // Draw a horizontal line
+    setcolor(BLUE); // Set line color to blue
+    line(midx, 1, midx, 480); // Draw a vertical line
+    getch(); // Wait for a key press
+    closegraph(); // Close graphics mode
+}
