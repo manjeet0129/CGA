@@ -1,0 +1,405 @@
+<pre id="content">
+        <h1>practical .1</h1>
+        <h2> //arc</h2>>
+ #include<graphics.h>       
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     arc(100,100,0,135,50); // Draw an arc
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//circle</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     circle(100,100,50); // Draw an arc
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//intagraph bar</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     bar(100, 100, 200, 200); // Draw a bar (rectangle filled with current fill color and pattern)
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//bar 3d</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     bar3d(100, 100, 200, 200, 50, 1); // Draw a 3D bar
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//ellipse</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     ellipse(100, 100, 0, 360, 50, 25); // Draw an ellipse
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//filliepse</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     setfillstyle(SOLID_FILL, BLUE); // Set fill style to solid blue
+     fillellipse(100, 100, 50, 25); // Draw a blue-filled ellipse
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//drawpoly</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     int points[] = {50, 50, 40, 200, 500, 400, 460,300,430,300}; // Polygon vertices
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     drawpoly(6, points); // Draw a polygon with 6 vertices
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//fillpoly</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm,points[] = {50, 50, 40, 200, 500, 400, 460,300,430,300}; // Polygon vertices
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     fillpoly(6, points); // Draw a polygon with 6 vertices
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+ <h2>//graph</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ 
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI"); // Initialize graphics mode
+     midx = getmaxx() / 2; // Get the middle x-coordinate of the screen
+     midy = getmaxy() / 2; // Get the middle y-coordinate of the screen
+     setcolor(RED); // Set line color to red
+     line(1, midy, 640, midy); // Draw a horizontal line
+     setcolor(BLUE); // Set line color to blue
+     line(midx, 1, midx, 480); // Draw a vertical line
+     getch(); // Wait for a key press
+     closegraph(); // Close graphics mode
+ }
+ 
+     <h1>Practical 2.</h1>
+     <h2>A.</h2>
+     
+ #include<stdio.h>
+     #include<graphics.h>
+     #include<conio.h>
+     
+     void main()
+     {
+         int gd = DETECT, gm;
+         int midx, midy;
+     
+         initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+     
+         midx = getmaxx() / 2;
+         midy = getmaxy() / 2;
+     
+         line(1, midy, 640, midy);
+         line(midx, 1, midx, 640);
+     
+         circle(150, 130, 50);
+         outtextxy(130, 200, "CIRCLE");
+     
+         rectangle(400, 90, 500, 170);
+         outtextxy(420, 200, "RECTANGLE");
+     
+         ellipse(450, 320, 0, 360, 50, 40);
+         outtextxy(425, 375, "ELLIPSE");
+     
+         arc(150, 350, 0, 120, 50);
+         outtextxy(140, 380, "ARC");
+     
+         getch();
+         closegraph();
+     }
+     <h2>B.HAT</h2>
+     #include<stdio.h>
+         #include<graphics.h>
+         #include<conio.h>
+         
+         void main()
+         {
+             int gd = DETECT, gm;
+             initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+         
+             setcolor(RED);
+             rectangle(150, 180, 250, 300);
+             rectangle(250, 180, 420, 300);
+             rectangle(180, 250, 200, 300);
+         
+             line(200, 100, 150, 180);
+             line(200, 100, 250, 180);
+             line(200, 100, 370, 100);
+             line(370, 100, 420, 180);
+         
+             getch();
+             closegraph();
+         }
+     <h2>C</h2>
+     #include<stdio.h>
+         #include<graphics.h>
+         #include<conio.h>
+         
+         void main() {
+             int gd = DETECT, gm;
+             int midx, midy;
+         
+             initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+         
+             midx = getmaxx() / 2;
+             midy = getmaxy() / 2;
+         
+             circle(midx, midy, 50);
+             outtextxy(300, 300, "CIRCLE");
+         
+             getch();
+             closegraph();
+         }
+ }
+ <h1>Practical.3</h1>
+ <h2>Draw basic shapes in centre of screen</h2>
+ <h2>square</h2>
+ #include<stdio.h>
+ #include <graphics.h>
+ #include <conio.h>
+ void main() {
+     int gd = DETECT, gm;
+    int midx = getmaxx()/2;
+    int midy = getmaxy()/2;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     rectangle(200, 180, 380, 340);
+     outtextxy(270, 350, "SQUARE");
+     getch();  // Wait for user input
+     closegraph();  // Close graphics mode
+ }
+ 
+ <h2>Concentric Circle</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy, i;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     midx = getmaxx() / 2;
+     midy = getmaxy() / 2;
+     for (i = 15; i <= 100; i += 20) {
+         setcolor(YELLOW);
+         circle(midx, midy, i);
+     }
+     outtextxy(260, 350, "Concentric Circle");
+     getch();  
+     closegraph(); 
+ }
+ 
+ <h2>ellipse</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     midx = getmaxx() / 2;
+     midy = getmaxy() / 2;
+     ellipse(midx, midy, 0, 360, 90, 50);
+     outtextxy(290, 300, "ellipse");
+     getch();  
+     closegraph();  
+ }
+ 
+ <h2>Line</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     midx = getmaxx() / 2;
+     midy = getmaxy() / 2;
+     line(1, midy, 640, midy);
+     outtextxy(327, 270, "line");
+     getch(); 
+     closegraph(); 
+ }
+ <h2>RECTANGLE</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy;
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     midx = getmaxx() / 2;
+     midy = getmaxy() / 2;
+     rectangle(midx, midy,200,150);
+     outtextxy(220, 250, "rectangle");
+     getch();  
+     closegraph();  
+ }
+ <h2>CIRLE</h2>
+ #include<stdio.h>
+ #include<graphics.h>
+ #include<conio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int midx, midy;
+     initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+     midx = getmaxx() / 2;
+     midy = getmaxy() / 2;
+     circle(midx, midy, 50);
+     outtextxy(300, 300, "CIRCLE");
+     getch();
+     closegraph();
+ }
+ <h1>practical no.4</h1>
+ <h2>// 2D Translation</h2>
+ #include <graphics.h>
+ #include <conio.h>
+ #include <stdio.h>
+ void main() {
+     int gd = DETECT, gm;
+     int x1, y1, x2, y2, tx, ty;
+     printf("Enter the two line end points (x1, y1, x2, y2): ");
+     scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+     initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+     line(x1, y1, x2, y2);
+     printf("Enter the translation coordinates (tx, ty): ");
+     scanf("%d %d", &tx, &ty);
+     x1 = x1 + tx;
+     x2 = x2 + tx;
+     y1 = y1 + ty;
+     y2 = y2 + ty;
+     printf("Line after translation\n");
+     line(x1, y1, x2, y2);
+     getch();
+     closegraph();
+ }
+ <h2>// 2D scaling</h2>
+    #include<graphics.h>
+    #include<conio.h>
+    #include<stdio.h>
+    void main()
+    {
+        int gd = DETECT, gm;
+        int x1, y1, x2, y2, x, y;
+        printf("Enter the line end points (x1, y1, x2, y2): ");
+        scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
+        initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+        line(x1, y1, x2, y2);  // Draw original line
+        printf("Enter the scaling factors (x, y): ");
+        scanf("%d%d", &x, &y);
+        x1 = x1 * x;
+        y1 = y1 * y;
+        x2 = x2 * x;
+        y2 = y2 * y;
+        printf("Line after scaling\n");
+        line(x1, y1, x2, y2);  // Draw scaled line
+        getch();
+        closegraph();
+    }
+    
+ 
+ <h1>practical no.5</h1>
+ <h2>DDA line drawing algorithm</h2>
+ #include <graphics.h>
+     #include <conio.h>
+     #include <math.h>
+     #include <stdio.h>
+     #include <dos.h>
+     
+     void main() {
+         int gd = DETECT, gm;
+         float x, y, x1, y1, x2, y2, dx, dy, step;
+         int i;
+         initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");  // Initialize graphics
+         printf("Enter the starting point (x1, y1): ");
+         scanf("%f %f", &x1, &y1);
+         printf("Enter the ending point (x2, y2): ");
+         scanf("%f %f", &x2, &y2);
+         dx = x2 - x1;
+         dy = y2 - y1;
+         if (fabs(dx) >= fabs(dy))  // fabs() for absolute value of float
+             step = fabs(dx);
+         else
+             step = fabs(dy);
+         dx = dx / step;
+         dy = dy / step;
+         x = x1;
+         y = y1;
+         i = 1;
+         while (i <= step) {
+             putpixel((int)(x + 0.5), (int)(y + 0.5), 5);  // Avoid `round()`
+             x = x + dx;
+             y = y + dy;
+             i = i + 1;
+             delay(100);  // Delay for visibility
+         }
+         getch();  // Wait for keypress
+         closegraph();  // Close graphics
+     }
+ 
+     <h2>B.//devlope a simple text screen saver using graphics function</h2>
+ #include <stdio.h>
+ #include<conio.h>
+ #include<math.h>
+ #include<graphics.h>
+ #include<dos.h>
+ void main()
+ {
+ int gd=DETECT,gm;
+ int midx, midy,i;
+ initgraph(&gd, &gm, "C:\\Turboc3\\BGI");
+ midx=getmaxx()/2;
+ midy-getmaxy()/2;
+ while(!kbhit())
+ {
+ for(i=0;i < midx;i++)
+ {
+ cleardevice();
+ settextstyle(3,0,5);
+ outtextxy(midx,i,"manjeet");
+ }
+ delay(1000);
+ }
+ getch();
+ closegraph();
+ }
+
+    </pre>
